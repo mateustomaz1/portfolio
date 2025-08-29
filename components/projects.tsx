@@ -96,7 +96,6 @@ export function Projects() {
           </p>
         </div>
 
-        {/* Filter Buttons */}
         <div className="flex justify-center mb-12">
           <div className="flex flex-wrap gap-2 p-1 bg-card rounded-lg">
             {categories.map((category) => (
@@ -114,7 +113,6 @@ export function Projects() {
           </div>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <Card key={project.id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
@@ -124,7 +122,7 @@ export function Projects() {
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                <div className="absolute inset-0 bg-emerald-100/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                   <Button size="sm" variant="secondary" asChild>
                     <a
                       href={project.liveUrl}
