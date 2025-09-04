@@ -66,7 +66,6 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Footer */}
         <div className="mt-20 pt-8 border-t border-border text-center">
           <p className="font-manrope text-muted-foreground">
             © 2024 Mateus Tomaz. Todos os direitos reservados.

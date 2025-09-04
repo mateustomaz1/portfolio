@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color tokens to use modern green palette instead of blue */
   --background: #ffffff;
   --foreground: #475569;
   --card: #f1f5f9;
@@ -41,7 +40,6 @@
 }
 
 .dark {
-  /* Updated dark mode tokens using darker greens and grays */
   --background: #0f172a;
   --foreground: #f1f5f9;
   --card: #1e293b;
@@ -114,7 +112,6 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Added font variables for Inter and Manrope */
   --font-sans: var(--font-inter);
   --font-serif: var(--font-manrope);
 }
@@ -127,7 +124,6 @@
     @apply bg-background text-foreground font-sans;
   }
 
-  /* Added custom animations */
   @keyframes fade-in {
     from {
       opacity: 0;

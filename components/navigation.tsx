@@ -89,7 +89,6 @@ export function Navigation() {
             Mateus Tomaz
           </button>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -118,7 +117,6 @@ export function Navigation() {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
             <Button
               variant="ghost"
