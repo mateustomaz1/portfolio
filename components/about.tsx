@@ -44,13 +44,12 @@ export function About() {
           <div className="space-y-6">
             <h3 className="font-geist text-2xl font-semibold">Minha Jornada</h3>
             <p className="font-manrope text-muted-foreground leading-relaxed">
-              Atuo há dois anos como freelancer, desenvolvendo projetos do protótipo à entrega final. Minha experiência
-              inclui a criação completa do site da empresa Evoluir, desde a prototipagem no Figma até o deploy final.
+              Atuo há cerca de dois anos como freelancer, acompanhando projetos do início ao fim da ideia no papel até a entrega final. Um dos trabalhos que mais me marcou foi o desenvolvimento completo do site da empresa Evoluir, onde cuidei desde a prototipagem no Figma até o deploy, garantindo que cada detalhe ficasse alinhado às necessidades do cliente.
             </p>
             <p className="font-manrope text-muted-foreground leading-relaxed">
-              Trabalho principalmente com HTML, CSS, JavaScript e React, com conhecimento em Java e Spring Boot. Também
-              atuo como voluntário no Projeto INCLUS, apoiando jovens e idosos no uso de ferramentas digitais, sempre
-              focando em acessibilidade e inclusão digital.
+              Meu dia a dia é focado em HTML, CSS, JavaScript e React, mas também tenho experiência com Java e Spring Boot. Durante minha trajetória acadêmica, fui bolsista pelo PIBITI/CNPq - IFPB em um projeto voltado para o desenvolvimento de soft skills, o que ampliou minha visão sobre trabalho em equipe, comunicação e adaptabilidade.
+
+Atualmente, estou me aprofundando em Node.js, TypeScript, Next.js e Prisma, buscando sempre evoluir e trazer soluções criativas e eficientes para cada projeto que assumo.
             </p>
             <p className="font-manrope text-muted-foreground leading-relaxed">
               Atualmente estou expandindo meus conhecimentos em Node.js, TypeScript, Next.js e Prisma, sempre buscando
