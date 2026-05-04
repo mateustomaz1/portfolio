@@ -1,75 +1,161 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Code, Palette, Zap } from "lucide-react"
+"use client";
 
-export function About() {
-  const values = [
-    {
-      icon: Code,
-      title: "Código Limpo",
-      description: "Escrevo código maintível, escalável e seguindo as melhores práticas da indústria.",
-    },
-    {
-      icon: Palette,
-      title: "Design Centrado no Usuário",
-      description: "Crio interfaces intuitivas que proporcionam experiências excepcionais aos usuários.",
-    },
-    {
-      icon: Zap,
-      title: "Performance",
-      description: "Otimizo cada detalhe para garantir aplicações rápidas e responsivas.",
-    },
-  ]
+import { Chip } from "@heroui/react";
+import { motion } from "framer-motion";
+import { Briefcase, Code2, GraduationCap, Workflow } from "lucide-react";
+import { useTranslations } from "use-intl";
+import type { ReactNode } from "react";
+
+import { GlassIconRowCard } from "@/components/ui/glass-icon-row-card";
+
+const SKILLS = [
+  "React.js",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "Tailwind CSS",
+  "APIs REST",
+  "Git",
+  "Scrum",
+  "Kanban",
+  "Figma",
+];
+
+const ABOUT_ASIDE = [
+  { key: "agenus" as const, icon: Briefcase },
+  { key: "ifpb" as const, icon: GraduationCap },
+  { key: "frontend" as const, icon: Code2 },
+  { key: "workflow" as const, icon: Workflow },
+];
+
+const strong = (chunks: ReactNode) => (
+  <strong className="font-semibold text-zinc-200">{chunks}</strong>
+);
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 22,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+export const About = () => {
+  const t = useTranslations("about");
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-geist text-3xl sm:text-4xl font-bold mb-6">Sobre Mim</h2>
-          <p className="font-manrope text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Desenvolvedor Frontend com experiência em UX/UI e desenvolvimento web, unindo design e código para criar
-            interfaces funcionais, acessíveis e escaláveis. Atualmente cursando Análise e Desenvolvimento de Sistemas no
-            IFPB.
-          </p>
+    <motion.section
+      id="about"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.25 }}
+      variants={fadeUp}
+      transition={{ duration: 0.55, ease: "easeOut" }}
+      className="w-full scroll-mt-24"
+    >
+      <div className="grid gap-10 lg:grid-cols-[1fr_340px] lg:items-start">
+        <div>
+          <motion.h2
+            variants={fadeUp}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            className=" max-w-[760px] text-3xl font-bold tracking-tight text-white sm:text-4xl"
+          >
+            {t("heading")}
+          </motion.h2>
+
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.5, delay: 0.16, ease: "easeOut" }}
+            className="mt-6 max-w-[820px] space-y-4 text-base leading-8 text-zinc-400"
+          >
+            <p>
+              {t.rich("p1", {
+                degree: strong,
+                job: strong,
+              })}
+            </p>
+
+            <p>
+              {t.rich("p2", {
+                stack: strong,
+              })}
+            </p>
+
+            <p>
+              {t.rich("p3", {
+                projects: strong,
+              })}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.05,
+                  delayChildren: 0.25,
+                },
+              },
+            }}
+            className="mt-8 flex flex-wrap gap-3"
+          >
+            {SKILLS.map((skill) => (
+              <motion.div
+                key={skill}
+                variants={{
+                  hidden: { opacity: 0, y: 12, scale: 0.96 },
+                  visible: { opacity: 1, y: 0, scale: 1 },
+                }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                whileHover={{ y: -2, scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+              >
+                <Chip
+                  size="sm"
+                  variant="bordered"
+                  radius="full"
+                  className="border-white/10 bg-white/4 font-medium text-zinc-300"
+                >
+                  {skill}
+                </Chip>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagem%20do%20WhatsApp%20de%202025-08-24%20%C3%A0%28s%29%2023.04.35_4c8ce0b0.jpg-b8E9AozNrCjhIbqliMi8oWJj3syfZP.jpeg"
-              alt="Mateus Tomaz trabalhando no laboratório"
-              className="rounded-lg object-cover w-full h-80"
-            />
+        <motion.aside
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.08,
+                delayChildren: 0.12,
+              },
+            },
+          }}
+        >
+          <div className="relative space-y-3">
+            {ABOUT_ASIDE.map((item) => (
+              <GlassIconRowCard
+                key={item.key}
+                icon={item.icon}
+                title={t(`aside.${item.key}.title`)}
+                description={t(`aside.${item.key}.description`)}
+              />
+            ))}
           </div>
-
-          <div className="space-y-6">
-            <h3 className="font-geist text-2xl font-semibold">Minha Jornada</h3>
-            <p className="font-manrope text-muted-foreground leading-relaxed">
-              Atuo há cerca de dois anos como freelancer, acompanhando projetos do início ao fim da ideia no papel até a entrega final. Um dos trabalhos que mais me marcou foi o desenvolvimento completo do site da empresa Evoluir, onde cuidei desde a prototipagem no Figma até o deploy, garantindo que cada detalhe ficasse alinhado às necessidades do cliente.
-            </p>
-            <p className="font-manrope text-muted-foreground leading-relaxed">
-              Meu dia a dia é focado em HTML, CSS, JavaScript e React, mas também tenho experiência com Java e Spring Boot. Durante minha trajetória acadêmica, fui bolsista pelo PIBITI/CNPq - IFPB em um projeto voltado para o desenvolvimento de soft skills, o que ampliou minha visão sobre trabalho em equipe, comunicação e adaptabilidade.
-
-Atualmente, estou me aprofundando em Node.js, TypeScript, Next.js e Prisma, buscando sempre evoluir e trazer soluções criativas e eficientes para cada projeto que assumo.
-            </p>
-            <p className="font-manrope text-muted-foreground leading-relaxed">
-              Atualmente estou expandindo meus conhecimentos em Node.js, TypeScript, Next.js e Prisma, sempre buscando
-              as melhores soluções para cada projeto.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {values.map((value, index) => (
-            <Card key={index} className="text-center p-6">
-              <CardContent className="pt-6">
-                <value.icon className="h-12 w-12 mx-auto mb-4" />
-                <h3 className="font-geist text-xl font-semibold mb-3">{value.title}</h3>
-                <p className="font-manrope text-muted-foreground leading-relaxed">{value.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        </motion.aside>
       </div>
-    </section>
-  )
-}
+    </motion.section>
+  );
+};

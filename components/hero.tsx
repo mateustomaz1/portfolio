@@ -1,91 +1,119 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
-
-export function Hero() {
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+import { Icon } from "@iconify/react";
+import { Button } from "@heroui/react";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+export const Hero = () => {
+  const t = useTranslations("hero");
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16"
+    <motion.section
+      id="inicio"
+      initial={{ opacity: 0, y: 28 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="flex w-full scroll-mt-24 flex-col gap-4"
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="mb-8">
-          <img
-            src="/perfil.jpg"
-            alt="Mateus Tomaz"
-            className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
-          />
-        </div>
-
-        <h1 className="font-geist text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-4">
-          Mateus Tomaz
-        </h1>
-
-        <p className="font-manrope text-xl sm:text-2xl text-muted-foreground mb-8">
-          Desenvolvedor Frontend & UX/UI Designer
-        </p>
-
-        <p className="font-manrope text-lg text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-          Desenvolvedor Frontend com experiência em UX/UI, unindo design e
-          código para criar interfaces funcionais, acessíveis e escaláveis. Atuo
-          há dois anos como freelancer, desenvolvendo projetos do protótipo à
-          entrega final.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            onClick={() => window.open("/MateusTomaz_CV.pdf", "_blank")}
-          >
-            <Download className="mr-2 h-5 w-5" />
-            Download CV
-          </Button>
-
-          <div className="flex gap-4">
-            <Button
-              variant="outline"
-              size="lg"
-              className="hover:bg-accent hover:bg-primary/90 bg-transparent"
-              onClick={() =>
-                window.open("https://github.com/mateustomaz1", "_blank")
-              }
-            >
-              <Github className="mr-2 h-5 w-5" />
-              GitHub
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="hover:bg-accent hover:bg-primary/90 bg-transparent"
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/mateus-tomaz-270b30204/",
-                  "_blank"
-                )
-              }
-            >
-              <Linkedin className="mr-2 h-5 w-5" />
-              LinkedIn
-            </Button>
-          </div>
-        </div>
-
-        <button
-          onClick={scrollToAbout}
-          className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+      <div className="flex flex-col gap-1">
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
+          className="text-5xl font-bold sm:text-6xl"
         >
-          <ArrowDown className="h-8 w-8 mx-auto" />
-        </button>
+          {t("line1")}
+        </motion.h1>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, delay: 0.2, ease: "easeOut" }}
+          className="text-5xl font-bold text-foreground-500 sm:text-6xl"
+        >
+          {t("line2")}
+        </motion.h2>
       </div>
-    </section>
+
+      <motion.p
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.65, delay: 0.35, ease: "easeOut" }}
+        className="max-w-2xl text-lg text-foreground-500"
+      >
+        {t("introBefore")}{" "}
+        <span className="font-bold text-foreground-800">{t("introBold")}</span>{" "}
+        {t("introMid")}{" "}
+        <span className="text-foreground-800">{t("introSpan")}</span>
+        {t("introAfter")}
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.65, delay: 0.72, ease: "easeOut" }}
+        className="flex gap-2"
+      >
+        <motion.div
+          whileHover={{ y: -2, scale: 1.02 }}
+          whileTap={{ scale: 0.97 }}
+          transition={{ type: "spring", stiffness: 400, damping: 18 }}
+        >
+          <Button
+            size="md"
+            color="primary"
+            variant="flat"
+            onPress={() => window.open("/MateusTomaz_CV.pdf", "_blank")}
+          >
+            <Icon
+              icon="lucide:download"
+              width={20}
+              height={20}
+              className="mr-2 transition-transform group-hover:-translate-y-0.5"
+            />
+            {t("downloadCv")}
+          </Button>
+        </motion.div>
+
+        <motion.div
+          whileHover={{ y: -2, scale: 1.06 }}
+          whileTap={{ scale: 0.94 }}
+          transition={{ type: "spring", stiffness: 400, damping: 18 }}
+        >
+          <Button
+            isIconOnly
+            size="md"
+            variant="flat"
+            onPress={() =>
+              window.open("https://github.com/mateustomaz1", "_blank")
+            }
+            aria-label="GitHub"
+          >
+            <Icon icon="mdi:github" width={24} height={24} />
+          </Button>
+        </motion.div>
+
+        <motion.div
+          whileHover={{ y: -2, scale: 1.06 }}
+          whileTap={{ scale: 0.94 }}
+          transition={{ type: "spring", stiffness: 400, damping: 18 }}
+        >
+          <Button
+            isIconOnly
+            size="md"
+            variant="flat"
+            onPress={() =>
+              window.open(
+                "https://www.linkedin.com/in/mateus-tomaz-270b30204/",
+                "_blank",
+              )
+            }
+            aria-label="LinkedIn"
+          >
+            <Icon icon="mdi:linkedin" width={24} height={24} />
+          </Button>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
-}
+};

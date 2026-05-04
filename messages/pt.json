@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Início",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "aria": "Navegação principal"
+  },
+  "languageSelect": {
+    "ariaLabel": "Selecionar idioma"
+  },
+  "hero": {
+    "line1": "Frontend Developer",
+    "line2": "& UI/UX Designer.",
+    "introBefore": "Sou",
+    "introBold": "desenvolvedor frontend",
+    "introMid": "com bastante entendimento de UI/UX e paixão por criar websites e aplicações que unem",
+    "introSpan": "beleza, funcionalidade e uma ótima experiência para o usuário",
+    "introAfter": ". Busco transformar ideias em interfaces intuitivas, responsivas e visualmente atraentes, combinando design bem estruturado com código limpo e eficiente.",
+    "downloadCv": "Download CV"
+  },
+  "mySkills": {
+    "cards": [
+      {
+        "title": "Front-end moderno",
+        "description": "Criação e manutenção de aplicações web com JavaScript, TypeScript, HTML5 e CSS3, com foco em responsividade, organização e experiência do usuário."
+      },
+      {
+        "title": "React & Next.js",
+        "description": "Desenvolvimento de interfaces com React.js, Next.js, Redux, Tailwind CSS, Framer e Zod, aplicando boas práticas para UIs modernas e escaláveis."
+      },
+      {
+        "title": "APIs, Git & Scrum",
+        "description": "Integração com APIs REST, controle de versão com Git e colaboração em times ágeis Scrum em projetos reais como Gomarke, Bemony e American Swiper."
+      },
+      {
+        "title": "Design & evolução",
+        "description": "Uso de Figma no apoio à criação de interfaces, formação em ADS pelo IFPB e certificações em Scrum, React, Tailwind, Git/GitHub e JavaScript."
+      }
+    ]
+  },
+  "about": {
+    "heading": "Desenvolvedor front-end focado em interfaces modernas, responsivas e escaláveis.",
+    "p1": "Sou formado em <degree>Análise e Desenvolvimento de Sistemas</degree> pelo IFPB e atuo como <job>Desenvolvedor de Software</job> na Agenus, trabalhando no desenvolvimento e manutenção de aplicações web.",
+    "p2": "Tenho experiência com <stack>React, Next.js, TypeScript, JavaScript e Tailwind CSS</stack>, além de integração com APIs REST, versionamento com Git e colaboração em times ágeis utilizando Scrum.",
+    "p3": "Participei de projetos como <projects>Gomarke, Bemony e Pageus</projects>, contribuindo para interfaces funcionais, organizadas e alinhadas à experiência do usuário.",
+    "aside": {
+      "agenus": {
+        "title": "Agenus",
+        "description": "Desenvolvedor de Software na Agenus desde 2025"
+      },
+      "ifpb": {
+        "title": "IFPB",
+        "description": "Graduado em Análise e Desenvolvimento de Sistemas"
+      },
+      "frontend": {
+        "title": "Front-end",
+        "description": "React, Next.js, TypeScript e Tailwind CSS com foco em interfaces modernas."
+      },
+      "workflow": {
+        "title": "Workflow",
+        "description": "APIs REST, Git, Scrum e Kanban com colaboração em times ágeis."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Trabalhos selecionados",
+    "subtitle": "Alguns projetos desenvolvidos com foco em interfaces responsivas, integração com APIs, organização de código e boa experiência de uso.",
+    "items": {
+      "5": {
+        "title": "Portfólio",
+        "description": "Portfólio pessoal desenvolvido com foco em apresentação profissional, experiência do usuário, responsividade e identidade visual."
+      },
+      "6": {
+        "title": "Desafio Frontend",
+        "description": "Desafio frontend desenvolvido para a empresa Agenus, com foco em interface responsiva, performance e boa apresentação visual."
+      },
+      "7": {
+        "title": "Desafio Rocketseat",
+        "description": "Desafio frontend desenvolvido para a Rocketseat, com foco em interface responsiva, performance e boa apresentação visual."
+      },
+      "1": {
+        "title": "Site Evoluir",
+        "description": "Site institucional desenvolvido a partir do protótipo no Figma, com foco em interface responsiva, performance e boa apresentação visual."
+      },
+      "3": {
+        "title": "Projeto Mario Bros",
+        "description": "Jogo desenvolvido com a biblioteca React, com foco em interface responsiva, performance e boa apresentação visual."
+      }
+    }
+  },
+  "projectCard": {
+    "repo": "Ver repositório do projeto {title}",
+    "live": "Abrir projeto {title}"
+  },
+  "contact": {
+    "badge": "Contato",
+    "heading": "Vamos conversar sobre seu próximo projeto?",
+    "body": "Estou disponível para oportunidades, projetos e conexões profissionais. Entre em contato por email, telefone ou acesse minhas redes para conhecer melhor meu trabalho.",
+    "fields": {
+      "email": { "label": "Email" },
+      "phone": { "label": "Telefone" },
+      "location": { "label": "Localização", "value": "Esperança, PB - Brasil" }
+    }
+  },
+  "footer": {
+    "rights": "© {year} Mateus Tomaz. Todos os direitos reservados."
+  }
+}

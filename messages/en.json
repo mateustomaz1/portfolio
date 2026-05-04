@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "aria": "Main navigation"
+  },
+  "languageSelect": {
+    "ariaLabel": "Select language"
+  },
+  "hero": {
+    "line1": "Frontend Developer",
+    "line2": "& UI/UX Designer.",
+    "introBefore": "I'm a",
+    "introBold": "frontend developer",
+    "introMid": "with a strong grasp of UI/UX and a passion for building websites and applications that combine",
+    "introSpan": "beauty, functionality, and a great user experience",
+    "introAfter": ". I turn ideas into intuitive, responsive, and visually appealing interfaces, pairing solid design with clean, efficient code.",
+    "downloadCv": "Download CV"
+  },
+  "mySkills": {
+    "cards": [
+      {
+        "title": "Modern front-end",
+        "description": "Building and maintaining web apps with JavaScript, TypeScript, HTML5, and CSS3, focusing on responsiveness, structure, and user experience."
+      },
+      {
+        "title": "React & Next.js",
+        "description": "UI development with React.js, Next.js, Redux, Tailwind CSS, Framer, and Zod, following best practices for modern, scalable interfaces."
+      },
+      {
+        "title": "APIs, Git & Scrum",
+        "description": "REST API integration, Git version control, and Scrum collaboration on real projects such as Gomarke, Bemony, and American Swiper."
+      },
+      {
+        "title": "Design & growth",
+        "description": "Figma to support interface work, ADS degree from IFPB, and certifications in Scrum, React, Tailwind, Git/GitHub, and JavaScript."
+      }
+    ]
+  },
+  "about": {
+    "heading": "Front-end developer focused on modern, responsive, and scalable interfaces.",
+    "p1": "I hold a degree in <degree>Systems Analysis and Development</degree> from IFPB and work as a <job>Software Developer</job> at Agenus, building and maintaining web applications.",
+    "p2": "I have hands-on experience with <stack>React, Next.js, TypeScript, JavaScript, and Tailwind CSS</stack>, plus REST API integration, Git, and agile teamwork with Scrum.",
+    "p3": "I've contributed to projects such as <projects>Gomarke, Bemony, and Pageus</projects>, delivering functional, well-structured interfaces aligned with user experience.",
+    "aside": {
+      "agenus": {
+        "title": "Agenus",
+        "description": "Software Developer at Agenus since 2025"
+      },
+      "ifpb": {
+        "title": "IFPB",
+        "description": "Graduate in Systems Analysis and Development"
+      },
+      "frontend": {
+        "title": "Front-end",
+        "description": "React, Next.js, TypeScript, and Tailwind CSS focused on modern interfaces."
+      },
+      "workflow": {
+        "title": "Workflow",
+        "description": "REST APIs, Git, Scrum, and Kanban with agile team collaboration."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Selected work",
+    "subtitle": "Projects built with a focus on responsive interfaces, API integration, clean code structure, and a solid user experience.",
+    "items": {
+      "5": {
+        "title": "Portfolio",
+        "description": "Personal portfolio focused on professional presentation, UX, responsiveness, and visual identity."
+      },
+      "6": {
+        "title": "Frontend challenge",
+        "description": "Frontend challenge for Agenus, focusing on responsive UI, performance, and polished presentation."
+      },
+      "7": {
+        "title": "Rocketseat challenge",
+        "description": "Frontend challenge for Rocketseat, focusing on responsive UI, performance, and polished presentation."
+      },
+      "1": {
+        "title": "Evoluir website",
+        "description": "Institutional site built from a Figma prototype, focusing on responsive UI, performance, and visual quality."
+      },
+      "3": {
+        "title": "Mario Bros project",
+        "description": "Game built with React, focusing on responsive UI, performance, and polished presentation."
+      }
+    }
+  },
+  "projectCard": {
+    "repo": "View repository for {title}",
+    "live": "Open project {title}"
+  },
+  "contact": {
+    "badge": "Contact",
+    "heading": "Let's talk about your next project?",
+    "body": "I'm open to opportunities, projects, and professional connections. Reach out by email or phone, or visit my social profiles to see more of my work.",
+    "fields": {
+      "email": { "label": "Email" },
+      "phone": { "label": "Phone" },
+      "location": { "label": "Location", "value": "Esperança, PB — Brazil" }
+    }
+  },
+  "footer": {
+    "rights": "© {year} Mateus Tomaz. All rights reserved."
+  }
+}

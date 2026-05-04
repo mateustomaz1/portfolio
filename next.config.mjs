@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ["next-intl"],
   eslint: {
     ignoreDuringBuilds: true,
   },
